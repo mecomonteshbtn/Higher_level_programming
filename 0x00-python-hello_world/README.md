@@ -475,4 +475,5 @@ Write the Python function **def magic_calculation(a, b):** that does exactly the
              10 BINARY_ADD
              11 RETURN_VALUE
 ```
-    Tip: [Python bytecode](https://docs.python.org/3.4/library/dis.html)
+
+Tip [Python bytecode](https://docs.python.org/3.4/library/dis.html)
