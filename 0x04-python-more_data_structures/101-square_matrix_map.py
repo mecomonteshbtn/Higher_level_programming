@@ -1,2 +1,3 @@
 #!/usr/bin/python3
-def complex_delete(a_dictionary, value):
+def square_matrix_map(matrix = []):
+    list(map(lambda list_: list(map((lambda x: x ** 2), list_)), matrix))
