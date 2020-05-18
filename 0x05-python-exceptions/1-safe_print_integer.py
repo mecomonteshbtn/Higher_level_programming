@@ -10,4 +10,4 @@ def safe_print_integer(value):
         print("{:d}".format(value))
         return True
     except:
-       return False
+        return False
