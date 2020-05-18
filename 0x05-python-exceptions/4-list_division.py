@@ -8,7 +8,6 @@ def list_division(my_list_1, my_list_2, list_length):
 
     handles errors and prints them to stdout
     """
-    i = 0
     new_list = []
     result = 0
     for i in range(0, list_length):
