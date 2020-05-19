@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
 Created on Tue May 19 16:23:37 2020
@@ -15,6 +15,5 @@ class Square:
     Attributes:
         size: a private instance
     """
-
     def __init__(self, size):
         self.__size = size
