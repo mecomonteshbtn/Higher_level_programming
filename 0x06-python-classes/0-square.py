@@ -7,6 +7,8 @@ Created on Tue May 19 14:21:54 2020
 """
 
 """Create a class"""
+
+
 class Square:
     """empty class Square that defines a square"""
     pass
