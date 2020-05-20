@@ -2,11 +2,14 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue May 19 14:21:54 2020
-
-@author: meco
+@author: Robinson Montes
 """
 
 
 class Square:
-    """empty class Square that defines a square"""
+    """Empty class Square that defines a square
+
+    Attributes:
+        empty
+    """
     pass

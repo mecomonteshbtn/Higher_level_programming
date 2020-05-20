@@ -1,32 +1,47 @@
 #!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May 19 14:21:54 2020
+@author: Robinson Montes
+"""
 
 
 class Square:
-    """
-    class square that has attributes:
-        size
-    some attributes are protected from input.
-    """
-    def __init__(self, size=0):
-        """
-        the initialization function for the square class
-        checks for input errors for size
-        """
-        if self.size(size):
-            self.__size = size
+    """Class Square that has attributes. Instantiation with size
 
-    def size(self):
+    Attributes:
+        size (int): The size of the square
+    """
+
+    def __init__(self, size=0):
+        """The __init__ method for Square class
+
+        Args:
+            size: (:obj: 'int', optional): A private instance size
         """
-        Property size to retrieve it with a private instance attribute size
+        self.__size = size
+
+    @property
+    def size(self):
+        """Call the function to checking property
+
+        Returns:
+            The size of the square
         """
         return self.__size
 
+    @size.setter
     def size(self, value):
+        """check errors and setter for size attribute
+
+        Args:
+            value: Value to checking errors
+
+        Raises:
+            TypeError: Exception if size is not an integer
+            ValueError: Exception if size is less than 0
         """
-        Property setter size to set it with a private instance attribute size
-        Validates if size is greater than 0 and integer type
-        """
-        if type(value) != int:
+        if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -34,7 +49,9 @@ class Square:
             self.__size = value
 
     def area(self):
-        """
-        Public instance method that returns the current square area
+        """Calculates the area of the square
+
+        Returns:
+            The area of the square
         """
         return self.__size ** 2
