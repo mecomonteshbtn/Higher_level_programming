@@ -1,0 +1,48 @@
+========================================================================
+'Test for 4-print_square module'
+========================================================================
+'Funtion to test:   print_square(size)'
+========================================================================
+
+>>> print_square = __import__('4-print_square').print_square
+
+'positive integer values'
+>>> print_square(2)
+##
+##
+
+'negative integer'
+>>> print_square(-2)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+'negative float'
+>>> print_square(2.4)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+'size is a bool'
+>>> print_square(False)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+'size is a tuple'
+>>> print_square((3, 5))
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+'size is a list'
+>>> print_square([3, 5])
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+'size is a dict'
+>>> print_square({3, 5})
+Traceback (most recent call last):
+...
+TypeError: size must be an integer

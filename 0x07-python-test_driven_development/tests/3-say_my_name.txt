@@ -1,0 +1,91 @@
+========================================================================
+'Test for 3-say_name module'
+========================================================================
+'Funtion to test:   3-say_my_name(first_name, last_name)'
+========================================================================
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+'both are integers'
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+'last_name is empty'
+>>> say_my_name("Walter")
+My name is Walter 
+
+'first_name and last_name empty'
+>>> say_my_name("")
+My name is  
+
+'first_name is an integer'
+>>> say_my_name(1, "White")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+'first_name is floating'
+>>> say_my_name(2.8, "White")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+'first_name is boolean'
+>>> say_my_name(False, "White")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+'first_name is tuple'
+>>> say_my_name((2, 8), "White")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+'first_name is list'
+>>> say_my_name([2, 8], "White")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+'first_name is dict'
+>>> say_my_name({2, 8}, "White")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+'last_name is an integer'
+>>> say_my_name("White", 1)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+'last_name is floating'
+>>> say_my_name("White", 2.8)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+'last_name is boolean'
+>>> say_my_name("White", True)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+'last_name is tuple'
+>>> say_my_name("White", (2, 8))
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+'last_name is list'
+>>> say_my_name("White", [2, 8])
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+'last_name is dict'
+>>> say_my_name("Walter", {2, 8})
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string

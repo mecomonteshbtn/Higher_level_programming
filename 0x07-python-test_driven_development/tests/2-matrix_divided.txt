@@ -1,0 +1,121 @@
+========================================================================
+'Test for 2-matrix_divided module'
+========================================================================
+'Funtion to test:   matrix_divided(matrix, div)'
+========================================================================
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+'positive integer values'
+>>> matrix_divided([[8, 4, -1], [4, 1, 8], [1, 2, 3]], 2)
+[[4.0, 2.0, -0.5], [2.0, 0.5, 4.0], [0.5, 1.0, 1.5]]
+
+'div is a negative integer value'
+>>> matrix_divided([[8, 4, -1], [4, 1, 8], [1, 2, 3]], -2)
+[[-4.0, -2.0, 0.5], [-2.0, -0.5, -4.0], [-0.5, -1.0, -1.5]]
+
+'positive and negative floating values'
+>>> matrix_divided([[9.4, 3.6, -1.2], [4.0, 1.6, 8], [1, 2, 3]], 2.0)
+[[4.7, 1.8, -0.6], [2.0, 0.8, 4.0], [0.5, 1.0, 1.5]]
+
+'div is a string'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], "Meco")
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'matrix is a string'
+>>> matrix_divided("Meco", 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'matrix is a bool'
+>>> matrix_divided(True, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'matrix is a tuple'
+>>> matrix_divided((2,3), 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'matrix is a dict'
+>>> matrix_divided({9, 3, -1, 4, 1, 8, 1, 2, 3}, 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'div is a bool'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], False)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'div is a tuple'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], (3, 4))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'div is a list'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], [3, 4])
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'b is a dict'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], {3})
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'matrix have an infinity float'
+>>> import sys
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, sys.float_info.max + 1e292, 3]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'div is an infinity float'
+>>> import sys
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], sys.float_info.max + 1e292)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'matrix have a nan'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, float('nan'), 3]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'div is nan'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], float('nan'))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'matrix have an inf'
+>>> matrix_divided([[9, 3, -1], [4, float('inf'), 8], [1, 2, 3]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+'div is inf'
+>>> matrix_divided([[9, 3, -1], [4, 1, 8], [1, 2, 3]], float('inf'))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+'matrix is an empty list'
+>>> matrix_divided([], 3)
+[]
+
+'Rows in matrix doesn't have the same length'
+>>> matrix_divided([[2, 3, 5, 4], [3, 5]], 3)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
