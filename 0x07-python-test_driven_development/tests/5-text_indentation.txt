@@ -16,7 +16,7 @@ Meco.
 <BLANKLINE>
 
 'text is a string with severals blankspaces'
->>> text_indentation("Walter: White?            Meco.")
+>>> text_indentation("Walter:		White?            Meco.")
 Walter:
 <BLANKLINE>
 White?
