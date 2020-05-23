@@ -13,6 +13,7 @@ Walter:
 White?
 <BLANKLINE>
 Meco.
+<BLANKLINE>
 
 'text with .:? without balnkspace'
 >>> text_indentation(".:?")
@@ -21,6 +22,7 @@ Meco.
 :
 <BLANKLINE>
 ?
+<BLANKLINE>
 
 'text is an integer'
 >>> text_indentation(1)
