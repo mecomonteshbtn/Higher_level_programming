@@ -17,7 +17,7 @@ class TestMaxInteger(unittest.TestCase):
         without arguments
         """
         test_list = [1, 2, 3, 8, 4]
-        self.assertEqual(max_integer(test_list), 8)
+        self.assertEqual(max_integer(test_list), max(test_list))
 
     def test_max_integer_neg(self):
         """
@@ -25,7 +25,7 @@ class TestMaxInteger(unittest.TestCase):
         without arguments
         """
         test_list = [1, 2, 3, 8, 4, -40, -400, -12, 0]
-        self.assertEqual(max_integer(test_list), 8)
+        self.assertEqual(max_integer(test_list), max(test_list))
 
     def test_max_integer_float(self):
         """
@@ -33,11 +33,12 @@ class TestMaxInteger(unittest.TestCase):
         without arguments
         """
         test_list = [1.3, 2.34, 3.12, 8.536, 4.6, -40.0, -400.999, -12.6, 0]
-        self.assertEqual(max_integer(test_list), 8.536)
+        self.assertEqual(max_integer(test_list), max(test_list))
 
     def test_max_integer_empty(self):
         """
         test case if an empty list is passed
         without arguments
         """
-        self.assertEqual(max_integer([]), None)
+        test_list = []
+        self.assertEqual(max_integer(test_list), None)

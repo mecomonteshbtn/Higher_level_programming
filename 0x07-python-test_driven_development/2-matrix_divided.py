@@ -33,7 +33,7 @@ def matrix_divided(matrix, div):
         return matrix
 
     if type(matrix) is list:
-        new_matrix = [x[:] for x in matrix] 
+        new_matrix = [x[:] for x in matrix]
         for i in range(len(matrix)):
             if i <= len(matrix) - 2 and len(matrix[i]) != len(matrix[i + 1]):
                 raise TypeError("Each row of the matrix must have the same" +
