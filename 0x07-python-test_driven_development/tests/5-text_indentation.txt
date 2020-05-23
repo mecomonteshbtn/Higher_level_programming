@@ -15,6 +15,15 @@ White?
 Meco.
 <BLANKLINE>
 
+'text is a string with severals blankspaces'
+>>> text_indentation("Walter: White?            Meco.")
+Walter:
+<BLANKLINE>
+White?
+<BLANKLINE>
+Meco.
+<BLANKLINE>
+
 'text with .:? without balnkspace'
 >>> text_indentation(".:?")
 .
