@@ -20,17 +20,5 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    i = 0
-    string = ""
-    while i < len(text) - 1:
-        if text[i] in ['.', '?', ':'] and text[i + 1] in " \t\b\a":
-            string += text[i] + '\n\n'
-            i += 1
-        elif text[i] in ['.', '?', ':'] and text[i + 1] not in " \t\b\a":
-            string += text[i] + '\n\n'
-        else:
-            string += text[i]
-        i += 1
-    string += text[i]
-
-    print("{}".format(string), end='')
+    print(text.replace('.', '.\n\n').replace(':', ':\n\n')\
+        .replace('?', '?\n\n').replace('\n ', '\n'), end='')
