@@ -14,6 +14,14 @@ White?
 <BLANKLINE>
 Meco.
 
+'text with .:? without balnkspace'
+>>> text_indentation(".:?")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+
 'text is an integer'
 >>> text_indentation(1)
 Traceback (most recent call last):
