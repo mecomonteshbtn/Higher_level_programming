@@ -42,3 +42,27 @@ class TestMaxInteger(unittest.TestCase):
         """
         test_list = []
         self.assertEqual(max_integer(test_list), None)
+
+    def test_max_integer_one(self):
+        """
+        test case if list just have one element
+        without arguments
+        """
+        test_list = [3]
+        self.assertEqual(max_integer(test_list), max(test_list))
+
+    def test_max_integer_first(self):
+        """
+        test case if the first element is the max
+        without arguments
+        """
+        test_list = [5, 1, 4, 2]
+        self.assertEqual(max_integer(test_list), max(test_list))
+
+    def test_max_integer_last(self):
+        """
+        test case if the last element is the max
+        without arguments
+        """
+        test_list = [1, 4, 2, 4, 4, 4, 9]
+        self.assertEqual(max_integer(test_list), max(test_list))
