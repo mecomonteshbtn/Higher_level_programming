@@ -4,15 +4,43 @@
 'Funtion to test:   lazy_matrix_mul(m_a, m_b)'
 ========================================================================
 
->>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+>>> lazy_matrix_mul = __import__("101-lazy_matrix_mul").lazy_matrix_mul
+
+'module docstring'
+>>> m = __import__("101-lazy_matrix_mul").__doc__
+>>> len(m) > 1
+True
+
+'function docstring'
+>>> f = __import__("101-lazy_matrix_mul").lazy_matrix_mul.__doc__
+>>> len(f) > 1
+True
+
+'empty args'
+>>> lazy_matrix_mul()
+Traceback (most recent call last):
+...
+TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+'only one arg'
+>>> lazy_matrix_mul([[2, 7]])
+Traceback (most recent call last):
+...
+TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+'more than 2 args'
+>>> lazy_matrix_mul([[1, 2]], [[8]], [[12]])
+Traceback (most recent call last):
+...
+TypeError: lazy_matrix_mul() takes 2 positional arguments but 3 were given
 
 'Matrix of integers'
->>> lazy_matrix_mul([[3, 4], [6, 5]], [[8], [7]])
+>>> print(lazy_matrix_mul([[3, 4], [6, 5]], [[8], [7]]))
 [[52],
  [83]]
 
 'Matrix of float'
->>> lazy_matrix_mul([[3.6, -4.5], [-6, 5-3]], [[-0.8], [1.7]])
+>>> print(lazy_matrix_mul([[3.6, -4.5], [-6, 5-3]], [[-0.8], [1.7]]))
 [[-10.53],
  [  8.2 ]]
 
