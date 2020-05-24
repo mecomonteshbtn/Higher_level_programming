@@ -1,7 +1,7 @@
 ========================================================================
 'Test for 101-lazy_matrix_mul module'
 ========================================================================
-'Funtion to test:   101-lazy_matrix_mul(m_a, m_b)'
+'Funtion to test:   lazy_matrix_mul(m_a, m_b)'
 ========================================================================
 
 >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
@@ -14,7 +14,7 @@
 'Matrix of float'
 >>> lazy_matrix_mul([[3.6, -4.5], [-6, 5-3]], [[-0.8], [1.7]])
 [[-10.53]
- [  8.2 ]]
+ [8.2]]
 
 'm_a is not a list of integers or floats'
 >>> lazy_matrix_mul(True, [[8, 7]])
