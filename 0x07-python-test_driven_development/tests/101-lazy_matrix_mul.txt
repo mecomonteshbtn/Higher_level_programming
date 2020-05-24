@@ -8,13 +8,13 @@
 
 'Matrix of integers'
 >>> lazy_matrix_mul([[3, 4], [6, 5]], [[8], [7]])
-array([[52],
-       [83]])
+[[52],
+ [83]]
 
 'Matrix of float'
 >>> lazy_matrix_mul([[3.6, -4.5], [-6, 5-3]], [[-0.8], [1.7]])
-array([[-10.53],
-       [  8.2 ]])
+[[-10.53],
+ [  8.2 ]]
 
 'm_a is not a list of integers or floats'
 >>> lazy_matrix_mul(True, [[8, 7]])
