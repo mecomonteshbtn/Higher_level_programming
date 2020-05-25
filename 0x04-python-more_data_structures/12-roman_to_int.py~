@@ -1,8 +1,0 @@
-#!/usr/bin/python3
-
-
-def weight_average(my_list=[]):
-    """
-    convert a roman numeral character into the respective integer
-    """
-    roman = {'I' : 
