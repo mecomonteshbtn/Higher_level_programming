@@ -8,4 +8,3 @@ del my_rectangle_1
 print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
 del my_rectangle_2
 print("{:d} instances of Rectangle".format(Rectangle.number_of_instances))
-
