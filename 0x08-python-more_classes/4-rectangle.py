@@ -22,8 +22,8 @@ class Rectangle:
             width (int, optional): The width of the rectangle
             height (int, optional): The height of the rectangle
         """
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
 
     def __str__(self):
         """
@@ -33,11 +33,11 @@ class Rectangle:
             string (str): The string with # rectangle
         """
         string = ""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return string
 
-        for i in range(self.height):
-            for j in range(self.width):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 string += '#'
             string += '\n'
         return string
@@ -49,7 +49,8 @@ class Rectangle:
         Returns:+
             string (str): string to get
         """
-        string = "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
+        string = "Rectangle(" + str(self.__width) + ", " +\
+            str(self.__height) + ")"
         return string
 
     @property
