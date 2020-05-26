@@ -24,8 +24,8 @@ class Rectangle:
             width (int, optional): The width of the rectangle
             height (int, optional): The height of the rectangle
         """
-        self.__height = height
-        self.__width = width
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     def __str__(self):
@@ -141,7 +141,6 @@ class Rectangle:
             return 0
         return 2 * (self.__width + self.__height)
 
-    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """
         Method to compare 2 rectangles
