@@ -24,8 +24,8 @@ class Rectangle:
         self.width = width
         self.height = height
         """
-        self.height = height
-        self.width = width
+        self.__height = height
+        self.__width = width
 
     def __str__(self):
         """
@@ -36,13 +36,13 @@ class Rectangle:
 
         """
         string = ""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return string
 
-        for i in range(self.height):
-            for j in range(self.width):
+        for i in range(self.__height):
+            for j in range(self.__width):
                 string += '#'
-            if i < self.height - 1:
+            if i < self.__height - 1:
                 string += '\n'
         return string
 

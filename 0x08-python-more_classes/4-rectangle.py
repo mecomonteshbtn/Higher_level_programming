@@ -30,7 +30,7 @@ class Rectangle:
         str method to print rectangle
 
         Returns:
-            string (str): The string with # rectangle
+            string : The string with # rectangle
         """
         string = ""
         if self.__width == 0 or self.__height == 0:
@@ -39,7 +39,8 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 string += '#'
-            string += '\n'
+            if i < self.__height - 1:
+                string += '\n'
         return string
 
     def __repr__(self):
@@ -49,9 +50,8 @@ class Rectangle:
         Returns:+
             string (str): string to get
         """
-        string = "Rectangle(" + str(self.__width) + ", " +\
-            str(self.__height) + ")"
-        return string
+        return "Rectangle(" + str(self.__width) + ", " + str(self.__height) +\
+            ")"
 
     @property
     def height(self):
