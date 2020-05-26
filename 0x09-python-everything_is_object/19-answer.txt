@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue May 26 09:11:17 2020
+
+@author: Robinson Montes
+"""
+
+def copy_list(l):
+    """copy of a list
+    """
+    if type(l) is not list:
+        return None
+    return l[:]
