@@ -306,20 +306,15 @@ guillaume@ubuntu:~/0x09$
 ```
 answer -> 
 
-       	  #!/usr/bin/python3
-		# -*- coding: utf-8 -*-
-		  """
-			Created on Tue May 26 09:11:17 2020
+	#!/usr/bin/python3
+	# -*- coding: utf-8 -*-
+	"""
+	Created on Tue May 26 09:11:17 2020
 
-				@author: Robinson Montes
-					 """
-
-						def copy_list(l):
-						        """copy of a list
-								    """
-									    if type(l) is not list:
-									       	       return None
-										       	          return l[:]
+	@author: Robinson Montes
+	"""
+	def copy_list(l):
+	    return l[:]
 ```
 
 ### [20. Tuple or not?](./20-answer.txt)
@@ -452,13 +447,10 @@ guillaume@ubuntu:~/0x09$
 No test cases needed
 ```
 answer ->
-	class Counter:
-	          i = 0
-
-		    def magic_string():
-		    	    from counter import Counter
-			    	     Counter.i += 1
-				     	           return ", ".join(["Holberton" for i in range(0, Counter.i)])
+	#!/usr/bin/python3
+	def magic_string(H=[]):
+	    H += ["Holberton"]
+	    return (", ".join(H))
 ```
 
 ### [31. Low memory cost](101-locked_class.py)
@@ -483,21 +475,13 @@ guillaume@ubuntu:~/0x09$
 ```
 ```
 answer ->
-	#!/usr/bin/python3                                                              
 
-
-											class LockedClass:
-											          """Locked class: can't set instance attributes to it                        
-												  	        """
-															    def __setattr__(self, name, value):
-															    			  if name == "first_name":
-																		     	      self.__dict__[name] = value
-																			      			    else:
-																						          raise AttributeError("'LockedClass' object has no attribute '" + na\
-																							  	me + "'")
+	#!/usr/bin/python3
+	class LockedClass:
+	    """A locked class that only lets the user dynamically create the instance
+	    attribute 'first_name'"""
+	    __slots__ = ['first_name']
 ```
-No test cases needed
-
 ### 32. int 1/3: [103-line1.txt](./103-line1.txt) [103-line1.txt](./103-line2.txt)
 ```
 julien@ubuntu:/python3$ cat int.py 
@@ -531,7 +515,7 @@ Assuming we are using a CPython implementation of Python3 with default options/c
 *    After the execution of line 4, is the int object pointed by b deleted? Answer with Yes or No [104-line4.txt](./104-line4.txt)
 *    How many int objects are created by the execution of the last line of the script [104-line1.txt](./104-line5.txt)
 ```
-answer -> line1 1   line2 1   line3 Yes  line4 Yes    line5 1
+answer -> line1 1   line2 0   line3 No  line4 Yes    line5 262
 ```
 
 ### [34. int 3/3](./105-line1.txt)
@@ -549,7 +533,7 @@ Assuming we are using a CPython implementation of Python3 with default options/c
 
 **Hint: NSMALLPOSINTS, NSMALLNEGINTS**
 ```
-answer -> 261
+answer -> 262
 ```
 ###  35. Clear strings
 ```
