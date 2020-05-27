@@ -515,7 +515,7 @@ Assuming we are using a CPython implementation of Python3 with default options/c
 *    After the execution of line 4, is the int object pointed by b deleted? Answer with Yes or No [104-line4.txt](./104-line4.txt)
 *    How many int objects are created by the execution of the last line of the script [104-line1.txt](./104-line5.txt)
 ```
-answer -> line1 1   line2 0   line3 No  line4 Yes    line5 262
+answer -> line1 1   line2 1   line3 Yes  line4 Yes    line5 1
 ```
 
 ### [34. int 3/3](./105-line1.txt)
