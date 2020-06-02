@@ -8,4 +8,3 @@ if inherits_from(a, bool):
     print("{} inherited from class {}".format(a, bool.__name__))
 if inherits_from(a, object):
     print("{} inherited from class {}".format(a, object.__name__))
-
