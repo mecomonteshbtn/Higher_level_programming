@@ -18,4 +18,4 @@ def class_to_json(obj):
         A jason representation
     """
     return {key: value for (key, value) in obj.__dict__.items()
-                if key in list(obj.__dict__.keys())}
+            if key in list(obj.__dict__.keys())}
