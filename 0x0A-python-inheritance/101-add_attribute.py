@@ -16,10 +16,7 @@ def add_attribute(obj, name, value):
         name (str): Name for the new attribute
         value (int): Value to new attribute
     """
-    attributes = [int, float, bool, complex, tuple, list,
-                  dict, set, frozenset, type, object]
-    for type_obj in attributes:
-        if type(obj) is type_obj:
-            raise TypeError("can't add new attribute")
+    if hasattr(obj, name):
+        raise TypeError("can't add new attribute")
 
     object.__setattr__(obj, name, value)
