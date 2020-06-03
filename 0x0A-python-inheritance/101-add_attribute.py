@@ -16,7 +16,7 @@ def add_attribute(obj, name, value):
         name (str): Name for the new attribute
         value (int): Value to new attribute
     """
-    if hasattr(obj, name):
+    if hasattr(obj, '__dict__'):
+        setattr(obj, name, value)
+    else:
         raise TypeError("can't add new attribute")
-
-    object.__setattr__(obj, name, value)
