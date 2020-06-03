@@ -11,4 +11,3 @@ j_student_3 = student_2.to_json(['middle_name', 'age'])
 print(j_student_1)
 print(j_student_2)
 print(j_student_3)
-

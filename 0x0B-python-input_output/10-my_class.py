@@ -2,6 +2,7 @@
 """ My class module
 """
 
+
 class MyClass:
     """ My class
     """
@@ -12,4 +13,3 @@ class MyClass:
 
     def __str__(self):
         return "[MyClass] {} - {:d}".format(self.name, self.number)
-

@@ -9,4 +9,3 @@ read_lines("my_file_0.txt", 3)
 print("--")
 print("Full content:")
 read_lines("my_file_0.txt")
-
