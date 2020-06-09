@@ -101,9 +101,9 @@ class Square(Rectangle):
             value (int): value to check if is int and gratter than 0
         """
         if type(value) != int:
-            raise TypeError('size must be an integer')
+            raise TypeError('width must be an integer')
         elif value <= 0:
-            raise ValueError('size must be > 0')
+            raise ValueError('width must be > 0')
         self.__size = value
 
 
