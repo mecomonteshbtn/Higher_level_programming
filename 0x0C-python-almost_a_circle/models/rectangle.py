@@ -104,14 +104,14 @@ class Rectangle(Base):
         Return:
             A dictionary representation
         """
-        return {'id': self.id, 'width': self.width, 'height': self.height,
-                'x': self.x, 'y': self.y}
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
+                'width': self.width}
 
     def to_csv(self):
         """
         Creates a list with Rectangle attributes
 
-        Return:
+        Return:y
             A Rectangle attributes' list for csv file
         """
         return [self.id, self.width, self.height, self.x, self.y]
@@ -185,7 +185,7 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError('x must be an integer')
         elif value < 0:
-            raise ValueError('x must be > 0')
+            raise ValueError('x must be >= 0')
         self.__x = value
 
     @property
@@ -209,5 +209,5 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError('y must be an integer')
         elif value < 0:
-            raise ValueError('y must be > 0')
+            raise ValueError('y must be >= 0')
         self.__y = value

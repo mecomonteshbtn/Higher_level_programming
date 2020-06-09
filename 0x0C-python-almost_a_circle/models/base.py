@@ -5,6 +5,7 @@ Created on Fri Jun  5 15:43:09 2020
 
 @author: meco
 """
+import json
 
 
 class Base:
@@ -39,7 +40,9 @@ class Base:
         Return:
             A json repreentation
         """
-        return str(list_dictionaries)
+        if list_dictionaries is None or not list_dictionaries:
+            return '[]'
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -87,9 +90,9 @@ class Base:
             An instance with all attributer already set
         """
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)
+            dummy = cls(1, 1)   # dummy = Rectangle(1, 1)
         elif cls.__name__ == "Square":
-            dummy = cls(1, 1)
+            dummy = cls(1, 1)   # dummy = Square(1, 1)
         dummy.update(**dictionary)
         return dummy
 
@@ -102,7 +105,6 @@ class Base:
             A list of instances
         """
         file_name = cls.__name__ + ".json"
-        string = []
         try:
             with open(file_name, 'r', encoding='utf-8') as file:
                 json_obj = cls.from_json_string(file.read())
