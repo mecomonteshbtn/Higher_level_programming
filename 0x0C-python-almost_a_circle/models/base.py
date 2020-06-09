@@ -90,9 +90,9 @@ class Base:
             An instance with all attributer already set
         """
         if cls.__name__ == "Rectangle":
-            dummy = cls(1, 1)   # dummy = Rectangle(1, 1)
+            dummy = cls(1, 1)
         elif cls.__name__ == "Square":
-            dummy = cls(1, 1)   # dummy = Square(1, 1)
+            dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
 
@@ -105,6 +105,7 @@ class Base:
             A list of instances
         """
         file_name = cls.__name__ + ".json"
+        json_obj = []
         try:
             with open(file_name, 'r', encoding='utf-8') as file:
                 json_obj = cls.from_json_string(file.read())
