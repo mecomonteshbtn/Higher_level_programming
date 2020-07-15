@@ -359,6 +359,26 @@ guillaume@ubuntu:~/$
 
 ### [10. Genre ID by show](./10-genre_id_by_show.sql)
 * Import the database dump from hbtn_0d_tvshows to your MySQL server: download
+
+How to import a SQL dump
+```
+$ echo "CREATE DATABASE hbtn_0d_tvshows;" | mysql -uroot -p
+Enter password: 
+$ curl "https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql" -s | mysql -uroot -p hbtn_0d_tvshows
+Enter password: 
+$ echo "SELECT * FROM tv_genres" | mysql -uroot -p hbtn_0d_tvshows
+Enter password: 
+id  name
+1   Drama
+2   Mystery
+3   Adventure
+4   Fantasy
+5   Comedy
+6   Crime
+7   Suspense
+8   Thriller
+$
+```
 Write a script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.
 *    Each record should display: tv_shows.title - tv_show_genres.genre_id
 *    Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
