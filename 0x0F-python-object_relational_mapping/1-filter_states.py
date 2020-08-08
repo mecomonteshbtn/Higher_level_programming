@@ -20,8 +20,8 @@ if __name__ == '__main__':
     db = MySQLdb.connect(host='localhost', user=username,
                          passwd=password, db=data, port=3306)
     cur = db.cursor()
-    num_rows = cur.execute("SELECT * FROM states WHERE states.name LIKE 'N%'\
-                           ORDER BY states.id")
+    num_rows = cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY\
+                           'N%' ORDER BY states.id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
