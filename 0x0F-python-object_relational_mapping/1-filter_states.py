@@ -21,7 +21,7 @@ if __name__ == '__main__':
                          passwd=password, db=data, port=3306)
     cur = db.cursor()
     num_rows = cur.execute("SELECT * FROM states WHERE states.name LIKE BINARY\
-                           'N%' ORDER BY states.id")
+                           'N%' ORDER BY states.id;")
     rows = cur.fetchall()
     for row in rows:
         print(row)
