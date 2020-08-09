@@ -25,5 +25,5 @@ if __name__ == '__main__':
     # create instance of new custom session class
     session = Session()
     new_state = session.query(State).filter(State.id == 2).one()
-    new_state.name = 'NewMexico'
+    new_state.name = 'New Mexico'
     session.commit()
