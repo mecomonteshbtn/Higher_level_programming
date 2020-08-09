@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # create instance of new custom session class
     session = Session()
     results = session.query(State.name, City.id, City.name)\
-            .join(City, City.state_id == State.id)\
-            .order_by(City.id)
+                     .join(City, City.state_id == State.id)\
+                     .order_by(City.id)
     for result in results:
         print("{}: ({}) {}".format(result[0], result[1], result[2]))
