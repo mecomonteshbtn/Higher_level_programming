@@ -8,4 +8,3 @@ print(find_peak([2, 2, 2]))
 print(find_peak([]))
 print(find_peak([-2, -4, 2, 1]))
 print(find_peak([4, 2, 1, 2, 3, 1]))
-
