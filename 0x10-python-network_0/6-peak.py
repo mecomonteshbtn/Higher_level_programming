@@ -9,7 +9,7 @@ def find_peak(list_of_integers):
     Return the peak in a list of integers
     """
     if len(list_of_integers) > 0:
-        max_i = max(list_of_integers)
-        return max_i
+        list_of_integers.sort()
+        return list_of_integers[-1]
     else:
         return None
