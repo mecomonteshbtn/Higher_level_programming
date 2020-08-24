@@ -10,7 +10,7 @@ from sys import argv
 
 
 if __name__ == '__main__':
-    url =  argv[1]
+    url = argv[1]
     email = {'email': argv[2]}
     request = Request(url, email)
     with urlopen(url) as response:
