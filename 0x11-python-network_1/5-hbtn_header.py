@@ -13,4 +13,4 @@ if __name__ == "__main__":
     url = argv[1]
     response = get(url)
     info = response.headers
-    print(info['X-Request-Id'])
+    print(info['x-request-id'])
