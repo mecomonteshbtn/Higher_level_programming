@@ -16,12 +16,14 @@ if __name__ == "__main__":
     else:
         q = {'q': ''}
     response = post(url, data=q)
-    if response.status_code == codes.ok:
-        obj = response.json()
-        if len(obj) == 0:
-            print('No result')
-            exit()
-        print('[{}] {}'.format(obj['id'], obj['name']))
+    if response.status_code == codes.ok and len(response) > 0:
+        try:
+            obj = response.json()
+            if len(obj) == 0:
+                print('No result')
+            else:
+                print('[{}] {}'.format(obj['id'], obj['name']))
+        except:
+            print('Not a valid JSON')
     else:
         print('No result')
-        exit()
