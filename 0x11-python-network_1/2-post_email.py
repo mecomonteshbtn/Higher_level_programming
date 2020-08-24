@@ -16,6 +16,6 @@ if __name__ == '__main__':
     email = urlencode(email)
     email = email.encode('ascii')
     request = Request(url, email)
-    with urlopen(url) as response:
+    with urlopen(request) as response:
         string = response.read().decode('utf-8')
         print(string)
