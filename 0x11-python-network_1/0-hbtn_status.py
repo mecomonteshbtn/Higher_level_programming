@@ -13,9 +13,6 @@ if __name__ == "__main__":
     with urlopen(url) as response:
         bytes_content = response.read()
         content = bytes_content.decode('utf-8')
-        string = """Body response:
-            \t- type: {}
-            \t- content: {}
-            \t- utf8 content: {}""".format(type(bytes_content), bytes_content,
-                                           content)
+        string = 'Body response:\n\t- type: {}\n\t- content: {}\n\t- \
+utf8 content: {}'.format(type(bytes_content), bytes_content, content)
         print(string)
