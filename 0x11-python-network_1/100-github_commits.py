@@ -15,10 +15,12 @@ if __name__ == "__main__":
     url = 'https://api.github.com/repos/{}/{}/commits'.format(username, repo)
     response = get(url)
     try:
-        obj = response.json()
-        for i in range(10):
-            print('{}: {}'.format(obj[i].get('sha'),
-                                  obj[i].get('commit').get('author')
+        objects = response.json()
+        for i, obj in enumerate(objects):
+            print('{}: {}'.format(obj.get('sha'),
+                                  obj.get('commit').get('author')
                                   .get('name')))
+            if i == 9:
+                break
     except ValueError:
         pass
