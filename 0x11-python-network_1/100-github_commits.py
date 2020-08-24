@@ -17,7 +17,8 @@ if __name__ == "__main__":
     try:
         obj = response.json()
         for i in range(10):
-            print('{}: {}'.format(obj[i]['sha'],
-                                  obj[i]['commit']['author']['name']))
+            print('{}: {}'.format(obj[i].get('sha'),
+                                  obj[i].get('commit').get('author')
+                                  .get('name')))
     except ValueError:
         print('Not a valid JSON')
