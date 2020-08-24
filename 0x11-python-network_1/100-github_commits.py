@@ -10,8 +10,8 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    username = argv[1]
-    repo = argv[2]
+    username = argv[2]
+    repo = argv[1]
     url = 'https://api.github.com/repos/{}/{}/commits'.format(username, repo)
     response = get(url)
     try:
@@ -21,4 +21,4 @@ if __name__ == "__main__":
                                   obj[i].get('commit').get('author')
                                   .get('name')))
     except ValueError:
-        print('Not a valid JSON')
+        pass
