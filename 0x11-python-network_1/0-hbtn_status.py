@@ -3,7 +3,7 @@
 """
 Created on Mon Aug 24 05:14:59 2020
 
-@author: meco
+@author: Robinson Montes
 """
 from urllib.request import urlopen
 
@@ -17,5 +17,5 @@ if __name__ == "__main__":
             \t- type: {}
             \t- content: {}
             \t- utf8 content: {}""".format(type(bytes_content), bytes_content,
-                                            content)
+                                           content)
         print(string)
