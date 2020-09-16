@@ -5,5 +5,6 @@ if (argc < 4) {
   console.log(0);
 } else {
   const array = argv.slice(2).sort().reverse();
-  console.log(array[1]);
+  const number = array[1];
+  console.log(number);
 }
