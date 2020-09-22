@@ -7,17 +7,10 @@ class Rectangle {
     }
   }
 
-  print () {
-    let rectangle = '';
+  print (c = 'X') {
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        rectangle += 'X';
-      }
-      if (i < this.height - 1) {
-        rectangle += '\n';
-      }
+      console.log(c.repeat(this.width));
     }
-    console.log(rectangle);
   }
 }
 
