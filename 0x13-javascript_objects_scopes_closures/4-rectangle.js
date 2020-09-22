@@ -8,16 +8,9 @@ class Rectangle {
   }
 
   print (c = 'X') {
-    let rectangle = '';
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        rectangle += c;
-      }
-      if (i < this.height - 1) {
-        rectangle += '\n';
-      }
+      console.log(c.repeat(this.width));
     }
-    console.log(rectangle);
   }
 
   rotate () {
