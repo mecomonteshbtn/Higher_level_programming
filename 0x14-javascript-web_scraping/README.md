@@ -19,7 +19,7 @@ What you should learn from this project:
 ---
 ## Install request module and use it
 
-Documentation
+[Documentation](https://github.com/request/request)
 ```
 $ sudo npm install request --global
 $ export NODE_PATH=/usr/lib/node_modules
